@@ -1,11 +1,10 @@
-import { Card } from './components/Card';
-import data from './data.json';
+import { CardList } from './components/CardList';
 
 function App() {
   return (
     <div className="container">
       <h1>such memory card!</h1>
-      <Card image={data[0]} />
+      <CardList />
     </div>
   );
 }

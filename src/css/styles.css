@@ -9,6 +9,12 @@ body {
   padding: 30px;
 }
 
+.cards-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
 .card {
   padding: 10px 10px 20px;
   border: 1px solid currentColor;
