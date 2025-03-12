@@ -1,18 +1,14 @@
 [
-  {
-    "src": "/src/images/bear.png",
-    "title": "bear"
-  },
-  {
-    "src": "/src/images/fox.png",
-    "title": "fox"
-  },
-  {
-    "src": "/src/images/bison.png",
-    "title": "bison"
-  },
-  {
-    "src": "/src/images/lion.png",
-    "title": "lion"
-  }
+  "alpaca",
+  "bear",
+  "bison",
+  "buffalo",
+  "cheetah",
+  "crocodile",
+  "elephant",
+  "fox",
+  "giraffe",
+  "hippo",
+  "lion",
+  "wild-boar"
 ]

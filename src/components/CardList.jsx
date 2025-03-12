@@ -5,7 +5,7 @@ function CardList() {
   return (
     <div className="cards-list">
       {images.map((image) => (
-        <Card key={image.title} image={image} />
+        <Card key={image} image={image} />
       ))}
     </div>
   );
