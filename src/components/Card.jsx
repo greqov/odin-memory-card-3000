@@ -1,6 +1,11 @@
-function Card({ image }) {
+function Card({ image, handleClick }) {
   return (
-    <div className="card">
+    <div
+      className="card"
+      onClick={() => {
+        handleClick(image);
+      }}
+    >
       <figure>
         <img
           className="card__image"
