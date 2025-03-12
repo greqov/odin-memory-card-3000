@@ -6,3 +6,5 @@ Memory card project for Odin's React course.
 - Live preview: _insert link_
 
 Build with vite.
+
+Icons: <a href="https://www.flaticon.com/free-stickers/animal" title="animal stickers">Animal stickers created by Stickers - Flaticon</a>
