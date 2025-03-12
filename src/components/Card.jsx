@@ -1,11 +1,11 @@
-import crocodile from '../images/crocodile.png';
+function Card({ image }) {
+  const { src, title } = image;
 
-function Card() {
   return (
     <div className="card">
       <figure>
-        <img className="card__image" src={crocodile} alt="" />
-        <figcaption>An elephant at sunset</figcaption>
+        <img className="card__image" src={src} alt={title} />
+        <figcaption> {title} </figcaption>
       </figure>
     </div>
   );
