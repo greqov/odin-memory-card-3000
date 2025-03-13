@@ -1,3 +1,14 @@
+html,
+body {
+  height: 100%;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
 body {
   background-color: #252529;
   color: #eee;
@@ -6,7 +17,42 @@ body {
 }
 
 .container {
-  padding: 30px;
+  margin: 0 auto;
+  padding: 0 20px;
+  max-width: 1200px;
+}
+
+.page-header {
+  padding: 15px 0;
+  border-bottom: 1px solid #444;
+}
+
+.page-main {
+  padding: 25px 0 30px;
+}
+
+.page-footer {
+  margin-top: auto;
+  padding: 25px;
+  border-top: 1px solid #444;
+  text-align: center;
+}
+
+.text-link {
+  color: currentColor;
+  text-decoration: none;
+  transition: color 0.2s ease-in;
+}
+
+.text-link:hover {
+  color: blueviolet;
+}
+
+.text-link--footer {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  vertical-align: bottom;
 }
 
 .cards-list {
@@ -21,6 +67,11 @@ body {
   border-radius: 5px;
   text-align: center;
   cursor: pointer;
+  transition: border-color 0.2s ease-in;
+}
+
+.card:hover {
+  border-color: #ff9800;
 }
 
 .card__image {

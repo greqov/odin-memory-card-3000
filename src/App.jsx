@@ -1,4 +1,7 @@
 import { useState, useEffect } from 'react';
+import Header from './components/Header';
+import Main from './components/Main';
+import Footer from './components/Footer';
 import { CardList } from './components/CardList';
 
 function App() {
@@ -24,12 +27,17 @@ function App() {
   }
 
   return (
-    <div className="container">
-      <h1>such memory card!</h1>
-      <div>Best score: {bestScore}</div>
-      <div>Current score: {selected.length} </div>
-      <CardList handleClick={handleClick} />
-    </div>
+    <>
+      <Header />
+
+      <Main>
+        <div>Best score: {bestScore}</div>
+        <div>Current score: {selected.length} </div>
+        <CardList handleClick={handleClick} />
+      </Main>
+
+      <Footer />
+    </>
   );
 }
 
