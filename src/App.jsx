@@ -31,8 +31,10 @@ function App() {
       <Header />
 
       <Main>
-        <div>Best score: {bestScore}</div>
-        <div>Current score: {selected.length} </div>
+        <div className="stats">
+          <div>Current score: {selected.length} </div>
+          <div>Best score: {bestScore}</div>
+        </div>
         <CardList handleClick={handleClick} />
       </Main>
 

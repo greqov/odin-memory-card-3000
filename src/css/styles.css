@@ -67,6 +67,13 @@ body {
   vertical-align: bottom;
 }
 
+.stats {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
 .cards-list {
   display: grid;
   /* somewhat (container with - gaps) / 6 */
