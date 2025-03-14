@@ -1,4 +1,6 @@
 function Card({ image, handleClick }) {
+  const url = `${window.location.pathname}images/${image}.png`;
+
   return (
     <div
       className="card"
@@ -7,11 +9,7 @@ function Card({ image, handleClick }) {
       }}
     >
       <figure>
-        <img
-          className="card__image"
-          src={`/src/images/${image}.png`}
-          alt={image}
-        />
+        <img className="card__image" src={url} alt={image} />
         <figcaption> {image} </figcaption>
       </figure>
     </div>

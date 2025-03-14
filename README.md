@@ -3,7 +3,7 @@
 Memory card project for Odin's React course.
 
 - Lesson: https://www.theodinproject.com/lessons/node-path-react-new-memory-card
-- Live preview: _insert link_
+- Live preview: https://greqov.github.io/odin-memory-card-3000/
 
 Build with vite.
 
