@@ -104,3 +104,23 @@ body {
   display: block;
   margin: 0 auto;
 }
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.loading-text {
+  text-align: center;
+}
+
+.loading-text svg {
+  margin: 0 auto 5px;
+  width: 32px;
+  height: 32px;
+  animation: spin 4s linear infinite;
+}
