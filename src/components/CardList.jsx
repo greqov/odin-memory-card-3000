@@ -1,8 +1,8 @@
 import { Card } from './Card';
-import images from '../data.json';
+// import images from '../data.json';
 import { shuffle } from '../utils/shuffle';
 
-function CardList({ handleClick }) {
+function CardList({ images, handleClick }) {
   return (
     <div className="cards-list">
       {shuffle(images).map((image) => (
