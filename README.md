@@ -1,6 +1,8 @@
-#  Memory card
+# Memory card
 
 Memory card project for Odin's React course.
+
+![screenshot](./screenshot.png)
 
 - Lesson: https://www.theodinproject.com/lessons/node-path-react-new-memory-card
 - Live preview: https://greqov.github.io/odin-memory-card-3000/
