@@ -39,6 +39,12 @@ body {
   border-bottom: 1px solid #444;
 }
 
+.page-header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .page-main {
   padding: 25px 0 30px;
 }
@@ -133,4 +139,12 @@ body {
   width: 32px;
   height: 32px;
   animation: spin 4s linear infinite;
+}
+
+.checkbox {
+  user-select: none;
+}
+
+.checkbox input {
+  margin-right: 8px;
 }

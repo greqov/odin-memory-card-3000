@@ -10,6 +10,7 @@ function App() {
   const [selected, setSelected] = useState([]);
   const [bestScore, setBestScore] = useState(0);
   const [images, setImages] = useState([]);
+  const [isLocalImages, setIsLocalImages] = useState(true);
 
   useEffect(() => {
     if (selected.length > bestScore) {
@@ -27,6 +28,12 @@ function App() {
       });
   }, []);
 
+  function handleCheckoxChange(ev) {
+    const { checked } = ev.target;
+    console.log(`set local images to ${checked}`);
+    setIsLocalImages(checked);
+  }
+
   function handleClick(item) {
     const hasItem = selected.indexOf(item) >= 0;
 
@@ -41,7 +48,7 @@ function App() {
 
   return (
     <>
-      <Header />
+      <Header checked={isLocalImages} onChange={handleCheckoxChange} />
 
       <Main>
         <div className="stats">
