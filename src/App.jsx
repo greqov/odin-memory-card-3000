@@ -5,6 +5,7 @@ import Loading from './components/Loading';
 import Footer from './components/Footer';
 import { CardList } from './components/CardList';
 import fetchImages from './utils/fetchImages';
+import data from './data.json';
 
 function App() {
   const [selected, setSelected] = useState([]);
@@ -19,14 +20,22 @@ function App() {
   }, [bestScore, selected]);
 
   useEffect(() => {
-    fetchImages('sunflower')
-      .then((images) => {
-        images && setImages(images);
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-  }, []);
+    if (isLocalImages) {
+      const images = data.map((title) => ({
+        url: `${window.location.pathname}images/${title}.png`,
+        title
+      }));
+      setImages(images);
+    } else {
+      fetchImages('sunflower')
+        .then((images) => {
+          setImages(images ?? []);
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+    }
+  }, [isLocalImages]);
 
   function handleCheckoxChange(ev) {
     const { checked } = ev.target;
@@ -56,7 +65,11 @@ function App() {
           <div>Best score: {bestScore}</div>
         </div>
         {images.length ? (
-          <CardList images={images} handleClick={handleClick} />
+          <CardList
+            images={images}
+            handleClick={handleClick}
+            isLocalImages={isLocalImages}
+          />
         ) : (
           <Loading>Loading images...</Loading>
         )}

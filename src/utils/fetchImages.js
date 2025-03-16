@@ -4,7 +4,9 @@ function fetchImages(query) {
 
   return fetch(url)
     .then((response) => response.json())
-    .then((response) => response.hits.map((item) => item.previewURL))
+    .then((response) =>
+      response.hits.map((item) => ({ url: item.previewURL, title: '' }))
+    )
     .catch((err) => {
       console.log(err);
     });
