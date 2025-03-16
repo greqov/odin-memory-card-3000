@@ -1,5 +1,5 @@
-function Card({ image, handleClick }) {
-  const url = `${window.location.pathname}images/${image}.png`;
+function Card({ image, handleClick, isLocalImages }) {
+  const { url, title } = image;
 
   return (
     <div
@@ -9,8 +9,12 @@ function Card({ image, handleClick }) {
       }}
     >
       <figure>
-        <img className="card__image" src={url} alt={image} />
-        <figcaption> {image} </figcaption>
+        <img
+          className={`card__image ${!isLocalImages && 'card__image--cover'}`}
+          src={url}
+          alt={title}
+        />
+        {title && <figcaption> {title} </figcaption>}
       </figure>
     </div>
   );

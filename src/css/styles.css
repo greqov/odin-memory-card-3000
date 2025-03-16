@@ -39,6 +39,12 @@ body {
   border-bottom: 1px solid #444;
 }
 
+.page-header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .page-main {
   padding: 25px 0 30px;
 }
@@ -88,7 +94,7 @@ body {
 }
 
 .card {
-  padding: 10px 10px 20px;
+  padding: 10px;
   border: 1px solid currentColor;
   border-radius: 5px;
   text-align: center;
@@ -103,4 +109,45 @@ body {
 .card__image {
   display: block;
   margin: 0 auto;
+}
+
+.card__image--cover {
+  object-fit: cover;
+  width: 150px;
+  height: 100px;
+}
+
+.card figcaption {
+  margin-bottom: 10px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.loading-text {
+  text-align: center;
+}
+
+.loading-text svg {
+  margin: 0 auto 5px;
+  width: 32px;
+  height: 32px;
+  animation: spin 4s linear infinite;
+}
+
+.checkbox {
+  user-select: none;
+}
+
+.checkbox input {
+  margin-right: 8px;
 }
