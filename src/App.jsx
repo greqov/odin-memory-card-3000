@@ -20,6 +20,8 @@ function App() {
   }, [bestScore, selected]);
 
   useEffect(() => {
+    setSelected([]); // reset current score
+
     if (isLocalImages) {
       const images = data.map((title) => ({
         url: `${window.location.pathname}images/${title}.png`,
